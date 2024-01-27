@@ -1,0 +1,222 @@
+:root {
+    --main-color: #F10F46;
+    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --step-3: clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem);
+    --step-4: clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem);
+    --step-5: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
+}
+
+.step--2 {
+    font-size: var(--step--2);
+}
+
+.step--1 {
+    font-size: var(--step--1);
+}
+
+.step-0 {
+    font-size: var(--step-0);
+}
+
+.step-1 {
+    font-size: var(--step-1);
+}
+
+.step-2 {
+    font-size: var(--step-2);
+}
+
+.step-3 {
+    font-size: var(--step-3);
+}
+
+.step-4 {
+    font-size: var(--step-4);
+}
+
+.step-5 {
+    font-size: var(--step-5);
+}
+
+.step--2 {
+    font-size: var(--step--2);
+}
+
+.step--1 {
+    font-size: var(--step--1);
+}
+
+.step-0 {
+    font-size: var(--step-0);
+}
+
+.step-1 {
+    font-size: var(--step-1);
+}
+
+.step-2 {
+    font-size: var(--step-2);
+}
+
+.step-3 {
+    font-size: var(--step-3);
+}
+
+.step-4 {
+    font-size: var(--step-4);
+}
+
+.step-5 {
+    font-size: var(--step-5);
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /*
+    14 = Tamaño de letra mas pequeño
+    18 = Tamaño de letra mas grande
+    300 = Tamaño de viewport más pequeño.
+    1400 = Tamaño de viewport más grande.
+  
+    */
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1400 - 300)));
+
+}
+
+/*** My Styles **/
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*HEader*/
+
+header {
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.brand img {
+    padding: 1rem;
+
+}
+
+.navbar-desktop {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/**CTA toggle**/
+
+.cta-btn {
+    position: fixed;
+    bottom: 4vh;
+    right: 4vw;
+    background-color: var(--main-color);
+    border-radius: 40%;
+    z-index: 999;
+}
+
+.menu-toggle {
+    position: fixed;
+    background-color: rgba(0, 2, 7, 0.8);
+    min-width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    flex-direction: column;
+    gap: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    transform: translate(-100%, 0);
+
+}
+
+.menu-active {
+    opacity: 1;
+    transform: translate(0, 0);
+    visibility: visible;
+}
+
+.menu-toggle a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1ch;
+    transition: all 0.3s ease-out;
+}
+
+.menu-toggle a:hover {
+    color: var(--main-color);
+
+}
+
+
+@media (min-width: 576px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*** Medium devices (tablets, 768px and up)**/
+@media (min-width: 768px) {
+
+    /**Header**/
+
+    .navbar-desktop {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navbar-desktop a {
+        margin-left: 2rem;
+        transition: all 0.3s ease-out;
+        color: black;
+    }
+
+    .navbar-desktop a:hover {
+        color: var(--main-color);
+
+    }
+
+    /**Menu toogle**/
+    .cta-btn {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .menu-toggle {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+}
+
+
+/**X-Large devices (large desktops, 1200px and up)**/
+@media (min-width: 1200px) {}
