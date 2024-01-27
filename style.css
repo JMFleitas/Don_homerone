@@ -323,10 +323,11 @@ form {
     gap: 1rem;
     height: 100%;
     background-color: var(--main-alpha-color);
+    margin: 0 10%;
 }
 
 form input {
-    min-width: 400px;
+    min-width: 350px;
     padding: 10px;
     border-radius: 15px;
 }
