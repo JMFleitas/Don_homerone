@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+
 :root {
-    --main-color: #F10F46;
+    --main-color: #d84fc8;
+    --second-color: rgb(246, 246, 84);
+    --third--color: #d6d6d6;
+    /**Font Family**/
+    --fisrt-font: 'Indie Flower', serif;
+    --second-font: 'Single Day', monospace;
+    --third--font: 'Caveat', "sans serif";
+
+    /**font size ***/
     --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
     --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
     --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
@@ -74,6 +86,66 @@
     font-size: var(--step-5);
 }
 
+/** grid con Flexbox **/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+.row>[class^="col"] {
+    padding: 1rem;
+}
+
+.col-1 {
+    width: 8.333333333333333%;
+}
+
+.col-2 {
+    width: 16.66666666666667%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33333333333333%;
+}
+
+.col-5 {
+    width: 41.66666666666667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33333333333333%;
+}
+
+.col-8 {
+    width: 66.66666666666667%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33333333333333%;
+}
+
+.col-11 {
+    width: 91.66666666666667%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -98,7 +170,14 @@ body {
   
     */
     font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1400 - 300)));
+    background-image: linear-gradient(to top, #e2ebf0 0%, #9a9a9a 100%);
+    min-height: 100vh;
+    font-family: var(--fisrt-font);
 
+}
+
+section {
+    margin: 1rem 0;
 }
 
 /*** My Styles **/
@@ -109,23 +188,44 @@ body {
     flex-wrap: wrap;
 }
 
+.container {
+    min-width: 80%;
+    margin: 0 10%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /*HEader*/
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 997;
     justify-content: center;
     flex-direction: column;
     font-weight: bold;
+    text-shadow: 2px 1px 2px var(--main-color);
     letter-spacing: 1px;
+    gap: 0.8rem;
+    padding: .5rem;
+    background-color: #111;
+    color: #fff;
 }
 
-.brand img {
-    padding: 1rem;
+.brand h1 {
+    display: inline-block;
+    margin: 0 10px;
+    font-family: var(--third--font);
 
 }
 
 .navbar-desktop {
     visibility: hidden;
     opacity: 0;
+    display: none;
 }
 
 /**CTA toggle**/
@@ -171,10 +271,43 @@ header {
 }
 
 .menu-toggle a:hover {
-    color: var(--main-color);
+    color: var(--second-color);
 
 }
 
+/**Pasos*/
+#pedidos p {
+    font-weight: bold;
+}
+
+/**Redes*/
+
+#redes {
+    color: #000;
+}
+
+#redes a {
+    color: #000;
+}
+
+
+/**Footer**/
+
+footer {
+    gap: 0.5rem;
+    background-color: #111 !important;
+    background: url(img/bg.foot.png) no-repeat center center;
+    background-size: contain;
+    height: 150px;
+    color: #fff;
+    text-shadow: 2px 1px 2px black;
+
+}
+
+footer a {
+    color: #fff;
+    text-shadow: 2px 1px 2px black;
+}
 
 @media (min-width: 576px) {
     header {
@@ -186,22 +319,27 @@ header {
 /*** Medium devices (tablets, 768px and up)**/
 @media (min-width: 768px) {
 
+    .col-6 {
+        width: 50%;
+    }
+
     /**Header**/
 
     .navbar-desktop {
         visibility: visible;
         opacity: 1;
+        display: contents;
     }
 
     .navbar-desktop a {
         margin-left: 2rem;
         transition: all 0.3s ease-out;
-        color: black;
+        color: #fff;
     }
 
     .navbar-desktop a:hover {
-        color: var(--main-color);
-
+        color: var(--second-color);
+        text-shadow: 2px 1px 2px black;
     }
 
     /**Menu toogle**/
@@ -214,6 +352,14 @@ header {
         visibility: hidden;
         opacity: 0;
     }
+
+    /**Pasos**/
+
+    .step-order {
+        order: 1;
+    }
+
+    /**REdes**/
 
 }
 
