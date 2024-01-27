@@ -43,7 +43,51 @@
     </nav>  
 
     <main class="container">
-       
+       <section class="row">
+           <article class="col-12 step-1">
+               <h1>Que esperas para trabajar con Nosotros??</h1>
+               <p><b>Dejanos tus  datos, para poder contactar con vos, no pierdas la oportunidad!!</b></p>
+           </article>
+           <article class="col-12 col-6 flex-container">
+             <img src="img/work.png" alt="Trabaja con scorpion">
+           </article>
+           <article class="col-12 col-6 flex-container">
+        
+            <form class="flex-container" action="">
+                <div><input type="text" placeholder="Nombre y Apellido*" name="nombre" required></div>
+                <div> <input type="email" placeholder="Email*" name="email" required></div>
+                <div><input type="date" placeholder="Fecha de Nacimiento" name="date" required> </div>
+                <div><input type="text" placeholder="Domicilio*" name="domicilio"></div>
+                <div>
+                    <select name="estudios" required="">
+                        <option hidden="" value="">Estudios</option>
+                        <option value="Secundario en curso">Secundario en curso</option>
+                        <option value="Secundario Completo">Secundario Completo</option>
+                        <option value="Secundario Incompleto">Secundario Incompleto</option>
+                        <option value="Universitario en curso">Universitario en curso</option>
+                        <option value="Universitario Completo">Universitario Completo</option>
+                        <option value="Universitario Incompleto">Universitario Incompleto</option>
+                        <option value="Postgrado en curso">Postgrado en curso</option>
+                        <option value="Postgrado Completo">Postgrado Completo</option>
+                        <option value="Postgrado Incompleto">Postgrado Incompleto</option>
+                    </select>
+                    <select name="Licencia" required="">
+                        <option hidden="" value="">Libreta Sanitaria</option>
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                    <select name="Licencia" required="">
+                        <option hidden="" value="">Licencia de Conducir</option>
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div><input type="text" placeholder="Puesto al que Postula"></div>
+                <div><input type="file" name="cv" id="cv"></div>
+               <input class="btn-form" type="submit" value="Enviar" >
+             </form>
+           </article>
+       </section>
     </main>
     <footer class="flex-container step-1">
         <small>&copy;Derechos revervados 2024 - </small>
