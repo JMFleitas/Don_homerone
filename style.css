@@ -282,9 +282,89 @@ header {
     height: 1rem;
 }
 
+/**** responsive slider ***/
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.slider-slides {
+    position: relative;
+    height: 400px;
+
+}
+
+.slider-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.slider-slide img {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    object-position: 50%;
+}
+
+.slider-slide.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.slider-btns {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.slider a {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: thin solid #000;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3 ease;
+}
+
+.slider a:hover {
+    color: #4d4d4d4d;
+}
+
 /**Pasos*/
 #pedidos p {
     font-weight: bold;
+}
+
+.btn-descarga {
+    padding: 1ch;
+    margin-top: 1rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border: 2px solid var(--main-color);
+    border-radius: 15px;
+    transition: all 0.5s ease-out;
+}
+
+.btn-descarga:hover {
+    background-color: #fff;
+    color: var(--main-color)
 }
 
 /**Redes*/
@@ -307,7 +387,7 @@ footer {
     background-size: contain;
     height: 150px;
     color: #fff;
-    text-shadow: 2px 1px 2px black;
+    text-shadow: 1px 1px 1px black;
 
 }
 
@@ -317,17 +397,21 @@ footer a {
 }
 
 /*!RRHH*/
+
+
+
 form {
     flex-direction: column;
-    padding: 1.5rem 0.8rem;
+    padding: 2rem 1rem;
     gap: 1rem;
-    height: 100%;
+    width: auto;
     background-color: var(--main-alpha-color);
-    margin: 0 10%;
+    margin: 0 10vw;
+
 }
 
 form input {
-    min-width: 350px;
+    width: 300px;
     padding: 10px;
     border-radius: 15px;
 }
@@ -341,9 +425,15 @@ form input:focus {
     color: var(--main-color);
 }
 
+.selectores-form select {
+    padding: 0.5ch 0;
+    margin-top: 0.2rem;
+}
+
+
 .btn-form {
-    min-width: 200px;
-    padding: 0.8rem;
+    width: 60%;
+    padding: 0.8rem 0;
     font-weight: bolder;
     background-color: var(--forth--color);
     color: #fff;
@@ -356,6 +446,7 @@ form input:focus {
     background-color: #fff;
 
 }
+
 
 @media (min-width: 576px) {
     header {
@@ -407,8 +498,10 @@ form input:focus {
         order: 1;
     }
 
-    /**REdes**/
-
+    /**rrhh**/
+    #formulario {
+        gap: 0.5rem;
+    }
 }
 
 
