@@ -306,7 +306,8 @@ header {
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1s ease;
+    transition: all 1s ease;
+
 }
 
 .slider-slide img {
@@ -407,27 +408,40 @@ form {
     width: auto;
     background-color: var(--main-alpha-color);
     margin: 0 10vw;
-
+    box-shadow: 2px 1px 15px 8px #444;
 }
+
 
 form input {
     width: 300px;
     padding: 10px;
     border-radius: 15px;
+    font-weight: 600;
+    outline-color: var(--forth--color);
+    border: none;
 }
+
+form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
 
 form select {
     padding: 3px;
     margin-bottom: 2px;
 }
 
-form input:focus {
-    color: var(--main-color);
-}
+
 
 .selectores-form select {
     padding: 0.5ch 0;
     margin-top: 0.2rem;
+}
+
+::placeholder {
+    color: #222;
 }
 
 

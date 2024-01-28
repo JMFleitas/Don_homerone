@@ -7,6 +7,7 @@ export default function slider() {
 
     let i = 0;
 
+
     d.addEventListener("click", e => {
         if (e.target === $prevBtn) {
             e.preventDefault();
@@ -15,14 +16,11 @@ export default function slider() {
             if (i < 0) {
                 i = $slides.length - 1
             }
+            $slides[i].classList.add("active");
+
         }
 
-        $slides[i].classList.add("active");
 
-    })
-
-
-    d.addEventListener("click", e => {
         if (e.target === $nextBtn) {
             e.preventDefault();
             $slides[i].classList.remove("active");
@@ -30,11 +28,17 @@ export default function slider() {
             if (i >= $slides.length) {
                 i = 0
             }
+            $slides[i].style.transform = 'translate(0, 0)';
+
+            $slides[i].classList.add("active");
 
         }
 
-        $slides[i].classList.add("active");
-
     })
+
+
+
+
+
 
 }

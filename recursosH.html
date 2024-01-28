@@ -60,15 +60,16 @@
                <p><b>Dejanos tus  datos, para poder contactar con vos, no pierdas la oportunidad!!</b></p>
            </article>
            <article class="col-12 col-6 flex-container">
-             <img src="img/work.png" alt="Trabaja con scorpion">
+             <img src="img/work.png" alt="Trabaja">
            </article>
            <article class="col-12 col-6 flex-container">
-        
             <form class="flex-container " action="">
-               <input type="text" placeholder="Nombre y Apellido*" name="nombre" required>
-               <input type="email" placeholder="Email*" name="email" required>
-                <input type="date" placeholder="Fecha de Nacimiento" name="date" required>
-                <input type="text" placeholder="Domicilio*" name="domicilio">
+                <h2 class="step-1">Tus datos</h2>
+               <input type="text" placeholder="Nombre y Apellido*" name="nombre" autocomplete="off" required>
+               <input type="email" placeholder="Email*" name="email" autocomplete="off" required>
+               <label for="date">Fecha de Nacimiento*</label>
+                <input type="date"  name="date" id="date"  autocomplete="off" required>
+                <input type="text" placeholder="Domicilio*" name="domicilio" autocomplete="off">
                 <div class="selectores-form">
                     <select name="estudios" required="">
                         <option hidden="" value="">Estudios</option>
@@ -93,7 +94,7 @@
                         <option value="No">No</option>
                     </select>
                 </div>
-                <input type="text" placeholder="Puesto al que Postula">
+                <input type="text" placeholder="Puesto al que Postula*"  autocomplete="none" required>
                 <input class="files-input" type="file" name="cv" id="cv">
                <input class="btn-form" type="submit" value="Enviar" >
              </form>
