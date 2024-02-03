@@ -174,13 +174,17 @@ body {
     */
     font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1400 - 300)));
     background-image: linear-gradient(to top, #e2ebf0 0%, #9a9a9a 100%);
-    min-height: 100vh;
     font-family: var(--fisrt-font);
 
 }
 
+main {
+    min-height: 100vh;
+}
+
 section {
     margin: 2rem 0;
+    min-height: 100%;
 }
 
 /*** My Styles **/
@@ -397,6 +401,36 @@ footer a {
     text-shadow: 2px 1px 2px black;
 }
 
+/*!Menu*/
+
+.menu-donas,
+.menu-cafes {
+    margin: 2rem 0;
+    max-width: 100%;
+    height: auto;
+}
+
+#menu img {
+    gap: 2rem;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.7s ease-in-out;
+}
+
+#menu img.izquierda {
+    transform: translateX(-150px);
+}
+
+#menu img.derecha {
+    transform: translateX(150px);
+}
+
+
+#menu img.visible {
+    opacity: 1;
+    transform: scale(1) translate(0);
+}
+
 /*!RRHH*/
 
 
@@ -515,6 +549,23 @@ form select {
     /**rrhh**/
     #formulario {
         gap: 0.5rem;
+    }
+
+    .apu {
+        max-height: 70%;
+    }
+
+    /**Menu*/
+    #menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu-donas,
+    .menu-cafes {
+        margin-top: 2rem;
+        max-height: 70vh;
+        width: auto;
     }
 }
 
