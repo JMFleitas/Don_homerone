@@ -15,7 +15,7 @@ export default function menuSmart() {
         })
     };
 
-    const observer = new IntersectionObserver(cb, { threshold: 0.5 });
+    const observer = new IntersectionObserver(cb, { threshold: 0.9 });
 
     $imgSmart.forEach(el => observer.observe(el));
 }
