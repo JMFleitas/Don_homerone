@@ -175,7 +175,6 @@ body {
     font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1400 - 300)));
     background-image: linear-gradient(to top, #e2ebf0 0%, #9a9a9a 100%);
     font-family: var(--fisrt-font);
-
 }
 
 main {
@@ -184,7 +183,7 @@ main {
 
 section {
     margin: 2rem 0;
-    min-height: 100%;
+
 }
 
 /*** My Styles **/
@@ -243,7 +242,7 @@ header {
     right: 4vw;
     background-color: var(--main-color);
     border-radius: 40%;
-    z-index: 999;
+    z-index: 1999;
 }
 
 .menu-toggle {
@@ -406,24 +405,16 @@ footer a {
 .menu-donas,
 .menu-cafes {
     margin: 2rem 0;
-    max-width: 100%;
-    height: auto;
+
 }
 
 #menu img {
-    gap: 2rem;
     opacity: 0;
     transform: scale(0.9);
     transition: all 0.7s ease-in-out;
 }
 
-#menu img.izquierda {
-    transform: translateX(-150px);
-}
 
-#menu img.derecha {
-    transform: translateX(150px);
-}
 
 
 #menu img.visible {

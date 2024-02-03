@@ -1,7 +1,7 @@
 const d = document;
 
 export default function menuSmart() {
-    const $imgSmart = d.querySelectorAll("img");
+    const $imgSmart = d.querySelectorAll("img[data-img-smart]");
 
 
     const cb = (entries) => {
